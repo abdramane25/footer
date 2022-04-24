@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9756c2c817.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="footer.css">
+    <title>footer</title>
+</head>
+<body>
+    <section id="formulaire">
+        <div class="container">
+          <div class="row">
+            <h3 class="contact">Contact</h3>
+            <div class="mb-3">
+              <form action="donne.html" id="myform" method="post" style="margin-left: 550px;margin-bottom: 20px;">
+              <label for="exampleFormControlInput1" class="form-label">Nom et Prenom</label>
+              <input type="text" class="form-control" id="nom" placeholder="entrez votre nom et prenom">
+              <br>
+              <span id="error"></span>
+            </div>
+            <div class="mb-3" style="margin-left: 567px; margin-bottom: 20px;">
+              <label for="exampleFormControlInput1" class="form-label">Adresse mail</label>
+              <input type="text" class="form-control" id="mail" placeholder="entrez votre adresse mail">
+              <br>
+              <span id="error"></span>
+            </div>
+            <div class="mb-3" style="margin-left: 558px;">
+              <label for="exampleFormControlInput1" class="form-label">Votre message</label>
+              <textarea name="message" id="message" class="form-control" placeholder="tapez un message" cols="30" rows="10"></textarea>
+            </div>
+            <br>
+            <span id="error"></span>
+            <div class="mb-3">
+              <button type="submit" class="btn btn-primary" style="margin-left: 750px;">Envoyer</button>
+            </div>
+              </form>
+          </div>
+        </div>
+      </section>
+
+    <footer>
+       
+    
+        <section class="maps">
+            <div class="geo">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d31032.219585588075!2d2.0956160887540807!3d13.533907015400247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x11d0754a5d679687%3A0xdccc2a02b1675bba!2sJVE%20NIGER%2C%2011944%20%2B22720733736!3m2!1d13.516213299999999!2d2.1378057!4m5!1s0x11da9f940569cead%3A0x91f5f8ebd4598cf3!2sNOVATECH%2C%20Niamey!3m2!1d13.5508732!2d2.0883339999999997!5e0!3m2!1sfr!2sne!4v1649948584321!5m2!1sfr!2sne" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    
+        <div class="pied">
+            <img src="logo.png" class="iamge">
+            <p class="presentation">NOVATECH Niger est une entreprise Numérique spécialisée dans les Services Réseaux, Serveurs Cloud, Développement Web et Mobile, Formations & 
+                      Certifications, Énergie, Électronique et Consulting.
+            </p>
+    <div class="contact"><p>Niamey,Niger</p>
+        <p>Cel : +227 91 01 22 12</p>
+        <p>Email : contact@novatech.ne</p>
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-twitter-square"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-linkedin-in"></i>
+    </div>
+    
+           </div>
+    </footer>
+    
+    <script>
+        let myform = document.getElementById ('myform');
+            myform.addEventListener('submit', function(e) {
+              let myInput = document.getElementById('nom');
+              let myInput2 =document.getElementById('mail');
+              let myInput3 = document.getElementById('message');
+              let myRegex = /^[a-zA-Z]+$/;
+              let myRegex2 = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+              let myRegex3 = /^[a-zA-Z0-9]*/;
+              if (myInput.value.trim()==""){
+                let myError =document.getElementById('error');
+                myError.innerHTML = "le champs nom est vide";
+                myError.style.color = "red";
+                e.preventDefault();
+              } else if (myRegex.test(myInput.value) == false){
+                let myError = document.getElementById('error');
+                myError.innerHTML = "les nom et prenom doivent comporter des lettres";
+                myError.style.color = 'red';
+                e.preventDefault();
+              }
+  
+              else if (myInput2.value.trim()==""){
+                let myError =document.getElementById('error');
+                myError.innerHTML = "le champs mail est vide";
+                myError.style.color = "red";
+                e.preventDefault();}
+              else if (myRegex2.test(myInput2.value) == false){
+                let myError = document.getElementById('error');
+                myError.innerHTML = "votre adresse mail doit comporter @";
+                myError.style.color = 'red';
+                e.preventDefault();
+              }
+  
+              else if (myInput3.value.trim()==""){
+                let myError = document.getElementById('error');
+                myError.innerHTML = "le champs message est vide";
+                myError.style.color = "red";
+                e.preventDefault();}
+              else if (myRegex3.test(myInput3.value) == false){
+                let myError =document.getElementById('error');
+                myError.innerHTML = "votre message doit comporter des lettres";
+                myError.style.color = 'red';
+                e.preventDefault();
+              }
+  
+            });
+              
+    </script>
+
+</body>
+
+</html>
