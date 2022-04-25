@@ -1,3 +1,4 @@
+@import url('htpps://fonts.googleapis.com/css?family=Montserrat');
 .image{
     display: flex;
 }
@@ -14,13 +15,20 @@
 
 
 .contact{
-    text-align: center;
+    margin-left: 130px;
+    margin-bottom: 20px;
     color: #323C3D;
 }
 
+.form-label{
+    color: black;
+   
+}
+
 .formulaire{
-    display: flex;
-    float: left;
+    margin-top: 200px;
+    margin-left: 400px;
+  
 }
 
 .maps{
@@ -29,4 +37,189 @@
     font-size: x-large;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat' sans-serif;
+    color: #fff;
+}
+
+
+
+.accord{
+    width: 50%;
+    display: flex;
+    float: right;
+}
+.accordion-item{
+    background-color: #fff;
+    color: #111;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 5px 0 rgba(238, 240, 243, 0.25);
+}
+.accordion-item-header{
+    padding: 0.5rem 3rem 0.5rem 1rem;
+    min-height: 3.5rem;
+    line-height: 1.25rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.accordion-item-header::after{
+    content: "\002B";
+    font-size: 2rem;
+    position: absolute;
+    right: 1rem;
+    transition:  transform 0.2s ease-in-out;
+}
+.accordion-item-header.active::after{
+    content: "\2212"; 
+}
+.accordion-item-body{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+   
+}
+.accordion-item-body-content{
+    padding: 1rem;
+    line-height: 1.5rem;
+    border-top: 1px solid;
+    border-image: linear-gradient(to right,transparent,#34495e,transparent) 1;
+
+}
+
+.logo{
+    height: 61px;
+  /*  width: 15%; */
+}
+   
+/*.accordion-item-header.active + .accordion-item-body{
+    max-height: 1000px;
+}*/
+
+@media(max-width:767px){
+    html {
+        font-size: 14px;
+    }
+
+
+}
+
+body {
+    font-family: 'Montserrat' sans-serif;
+    background-color: white;
+    color: #000;
+}
+
+.slider {
+    height: 70vh;
+    position: relative;
+}
+
+.slider img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.slider img.active {
+    opacity: 1;
+}
+
+.suivant {
+    color: #95D3FF;
+    font-size: 3rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1rem;
+    cursor: pointer;
+}
+
+.precedant {
+    color: #95D3FF;
+    font-size: 3rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1rem;
+    cursor: pointer;
+}
+
+.cont-btn {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.img-apropos{
+    max-width: 100%;
+}
+
+.btn-old {
+    font-size: 0px;
+    margin: 0 500px;
+    cursor: pointer;
+    color: rgb(87, 21, 201);
+}
+
+ul {
+    float: right;
+    display: flex;
+}
+
+li {
+    list-style-type: none;
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.entete {
+    background-color: #95D3FF;
+}
+
+button {
+    color: rgb(87, 21, 201);
+}
+
+.containe-old {
+    border: 1px solid rgb(12, 11, 11);
+    background-color: #95D3FF;
+    color: white;
+    margin-top: 0;
+}
+
+section#list-services {
+    margin-top: 0;
+    background-color: white;
+}
+
+section#list-services img {
+    /*width: 100%;
+    hei0ght: 70%; */
+}
+
+h2 {
+    text-align: center;
+}
+
+
+
+
 
